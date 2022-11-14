@@ -25,9 +25,9 @@ namespace MCGalaxy
     /// <summary> Checks for and applies software updates. </summary>
     public static class Updater 
     {    
-        public static string SourceURL = "https://github.com/UnknownShadow200/MCGalaxy";
-        public const string BaseURL    = "https://raw.githubusercontent.com/UnknownShadow200/MCGalaxy/master/";
-        public const string UploadsURL = "https://github.com/UnknownShadow200/MCGalaxy/tree/master/Uploads";
+        public static string SourceURL = "https://github.com/Evanzap/KDEGalaxy";
+        public const string BaseURL    = "https://raw.githubusercontent.com/Evanzap/KDEGalaxy/master/";
+        public const string UploadsURL = "https://github.com/Evanzap/KDEGalaxy/tree/master/Uploads";
         
         const string CurrentVersionURL = BaseURL + "Uploads/current_version.txt";
 #if MCG_STANDALONE
