@@ -17,8 +17,7 @@
 */
 using System.Reflection;
 
-[assembly: AssemblyTitle("MCGalaxy")]
+[assembly: AssemblyTitle("KDEGalaxy")]
 [assembly: AssemblyDescription("ClassiCube Server Software")]
-[assembly: AssemblyProduct("MCGalaxy")]
-[assembly: AssemblyCopyright("Copyright © 2015-2022")]
+[assembly: AssemblyProduct("KDEGalaxy")]
 [assembly: AssemblyVersion(MCGalaxy.Server.InternalVersion)]
