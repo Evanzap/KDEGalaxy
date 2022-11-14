@@ -121,15 +121,15 @@ case "$1" in
 				echo
 				echo Update Found!
 				echo -n Applying update:
-				rm ${mcfdir}/MCGalaxy.exe
-				rm ${mcfdir}/MCGalaxy_.dll
-				mv ${mcfdir}/MCGalaxy.update ${mcfdir}/MCGalaxy.exe
-				mv ${mcfdir}/MCGalaxy_.update ${mcfdir}/MCGalaxy_.dll
+				rm ${mcfdir}/KDEGalaxy.exe
+				rm ${mcfdir}/KDEGalaxy_.dll
+				mv ${mcfdir}/MCGalaxy.update ${mcfdir}/KDEGalaxy.exe
+				mv ${mcfdir}/MCGalaxy_.update ${mcfdir}/KDEGalaxy_.dll
 				if [ -f "${mcfdir}/MCGalaxy_.update" ]; then
 					if [ -f "${mcfdir}/MCGalaxy.update" ]; then
 						echo -e FAILED!
-						if [ -f "${mcfdir}/MCGalaxy_.dll" ]; then
-							if [ -f "${mcfdir}/MCGalaxy.exe" ]; then
+						if [ -f "${mcfdir}/KDEGalaxy_.dll" ]; then
+							if [ -f "${mcfdir}/KDEGalaxy.exe" ]; then
 								$0 ${default}
 							fi
 						else
@@ -138,8 +138,8 @@ case "$1" in
 						fi
 					fi
 				else
-					if [ -f "${mcfdir}/MCGalaxy_.dll" ]; then
-						if [ -f "${mcfdir}/MCGalaxy.exe" ]; then
+					if [ -f "${mcfdir}/KDEGalaxy_.dll" ]; then
+						if [ -f "${mcfdir}/KDEGalaxy.exe" ]; then
 							echo -e SUCCESS!
 							$0 ${default}
 						fi
