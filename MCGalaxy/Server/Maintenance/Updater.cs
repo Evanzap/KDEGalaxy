@@ -33,13 +33,13 @@ namespace MCGalaxy
 #if MCG_STANDALONE
         static string dllURL = "https://cs.classicube.net/mcgalaxy/" + IOperatingSystem.DetectOS().StandaloneName;
 #elif TEN_BIT_BLOCKS
-        const string dllURL = BaseURL + "Uploads/MCGalaxy_infid.dll";
+        const string dllURL = BaseURL + "Uploads/KDEGalaxy_infid.dll";
 #else
-        const string dllURL = BaseURL + "Uploads/MCGalaxy_.dll";
+        const string dllURL = BaseURL + "Uploads/KDEGalaxy_.dll";
 #endif
         const string changelogURL = BaseURL + "Changelog.txt";
-        const string guiURL = BaseURL + "Uploads/MCGalaxy.exe";
-        const string cliURL = BaseURL + "Uploads/MCGalaxyCLI.exe";
+        const string guiURL = BaseURL + "Uploads/KDEGalaxy.exe";
+        const string cliURL = BaseURL + "Uploads/KDEGalaxyCLI.exe";
 
         public static event EventHandler NewerVersionDetected;
         
@@ -70,16 +70,16 @@ namespace MCGalaxy
         public static void PerformUpdate() {
             try {
                 try {
-                    DeleteFiles("Changelog.txt", "MCGalaxy_.update", "MCGalaxy.update", "MCGalaxyCLI.update",
-                                "prev_MCGalaxy_.dll", "prev_MCGalaxy.exe", "prev_MCGalaxyCLI.exe");
+                    DeleteFiles("Changelog.txt", "KDEGalaxy_.update", "KDEGalaxy.update", "KDEGalaxyCLI.update",
+                                "prev_KDEGalaxy_.dll", "prev_KDEGalaxy.exe", "prev_KDEGalaxyCLI.exe");
                 } catch {
                 }
                 
                 WebClient client = HttpUtil.CreateWebClient();
-                client.DownloadFile(dllURL, "MCGalaxy_.update");
+                client.DownloadFile(dllURL, "KDEGalaxy_.update");
 #if !MCG_STANDALONE
-                client.DownloadFile(guiURL, "MCGalaxy.update");
-                client.DownloadFile(cliURL, "MCGalaxyCLI.update");
+                client.DownloadFile(guiURL, "KDEGalaxy.update");
+                client.DownloadFile(cliURL, "KDEGalaxyCLI.update");
 #endif
                 client.DownloadFile(changelogURL, "Changelog.txt");
 
@@ -91,14 +91,14 @@ namespace MCGalaxy
                 
                 // Move current files to previous files (by moving instead of copying, 
                 //  can overwrite original the files without breaking the server)
-                AtomicIO.TryMove(serverDLL,         "prev_MCGalaxy_.dll");
-                AtomicIO.TryMove("MCGalaxy.exe",    "prev_MCGalaxy.exe");
-                AtomicIO.TryMove("MCGalaxyCLI.exe", "prev_MCGalaxyCLI.exe");
+                AtomicIO.TryMove(serverDLL,         "prev_KDEGalaxy_.dll");
+                AtomicIO.TryMove("KDEGalaxy.exe",    "prev_KDEGalaxy.exe");
+                AtomicIO.TryMove("KDEGalaxyCLI.exe", "prev_KDEGalaxyCLI.exe");
 
                 // Move update files to current files
-                AtomicIO.TryMove("MCGalaxy_.update",   serverDLL);
-                AtomicIO.TryMove("MCGalaxy.update",    "MCGalaxy.exe");
-                AtomicIO.TryMove("MCGalaxyCLI.update", "MCGalaxyCLI.exe");                             
+                AtomicIO.TryMove("KDEGalaxy_.update",   serverDLL);
+                AtomicIO.TryMove("KDEGalaxy.update",    "KDEGalaxy.exe");
+                AtomicIO.TryMove("KDEGalaxyCLI.update", "KDEGalaxyCLI.exe");                             
 
                 Server.Stop(true, "Updating server.");
             } catch (Exception ex) {
