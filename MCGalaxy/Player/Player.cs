@@ -33,12 +33,12 @@ namespace MCGalaxy {
     sealed class ConsolePlayer : Player {
         public ConsolePlayer() : base("(console)") {
             group = Group.ConsoleRank;
-            color = "&S";
-            SuperName = "Console";
+            color = "&b";
+            SuperName = "Konsole";
         }
         
         public override string FullName {
-            get { return "Console [&a" + Server.Config.ConsoleName + "&S]"; }
+            get { return "&bKonsole [&3" + Server.Config.ConsoleName + "&b]"; }
         }
         
         public override void Message(byte type, string message) {
