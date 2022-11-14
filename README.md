@@ -1,70 +1,12 @@
-MCGalaxy is a fully featured and customisable **ClassiCube Server Software** based on MCForge/MCLawl.
+KDEGalaxy is a fully featured and customisable **ClassiCube Server Software** based on MCGalaxy.
 
-**Setup**
------------------
-Download the latest MCGalaxy release [from here](https://github.com/UnknownShadow200/MCGalaxy/releases)
-* Windows: You need to install .NET framework 4.0. Windows 8/10/11 already have this included.
-* macOS:   You need to install the [Mono framework](https://www.mono-project.com).
-* Linux:   You need to install the [Mono framework](https://www.mono-project.com). (or just `apt install mono-complete` if on Ubuntu)
+At the time of writing this, the only feature that KDEGalaxy offers is changing the "Console [$(option)]" text in chat to "Konsole [$(option)]"<br>
+Here is an example of the Konsole chat text:<br>
+![opt2](https://github.com/Evanzap/KDEGalaxy/blob/master/images/konsole.png?raw=true)
 
-Run **MCGalaxy.exe** for a graphical interface, or run **MCGalaxyCLI.exe** for command line only.
+I don't have anything else to say about this so here is an of KDE courtesy of https://www.kde.org/
 
-Joining your server
------------------
-Run MCGalaxy.exe or MCGalaxyCLI.exe firstly. You'll see something like:
-![opt3](https://user-images.githubusercontent.com/6509348/60258728-0e05bd00-9919-11e9-9ae8-f1262719cd50.png)
-
-If you are signed in to classicube.net, you can copy this URL straight into your web browser and start playing.
-
-#### Joining from the ClassiCube client
-Click **Direct connect** at the main menu.
-![opt1](https://user-images.githubusercontent.com/6509348/60258725-0e05bd00-9919-11e9-8f8c-fbbdc52f04f9.png)
-
-Type your username into *Username*, ```127.0.0.1:25565``` into *IP:Port*, and leave *Mppass* blank. Then click **Connect**.
-![opt2](https://user-images.githubusercontent.com/6509348/60258727-0e05bd00-9919-11e9-890d-5c25cdf385c1.png)
-
-#### Make yourself owner
-After joining, you will want to rank yourself owner so you can use all commands.
-
-Type ```/rank [your account] owner``` into the bottom text box, then press Enter.
-
-![opt4](https://user-images.githubusercontent.com/6509348/60258729-0e9e5380-9919-11e9-921d-ea7e0c4365af.png)
-
-
-Letting others join your server
------------------
-### LAN players
-You need to find out your LAN/local IP address.
-*  Windows: Type ```ipconfig``` into **Command Prompt**. Look for ```IPv4 address``` in the output
-*  macOS: Type ```ipconfig getifaddr en0``` or ```ipconfig getifaddr en1``` into **Terminal**
-*  Linux: Type ```hostname -I``` into **Terminal**. Lan IP is usually the first address in the output
-
-#### Joining from a web browser
-Enter the server URL followed by ```?ip=[lan ip]``` into the web browser.<br>
-(e.g. http://www.classicube.net/server/play/d1362e7fee1a54365514712d007c8799?ip=192.168.1.30)
-
-#### Joining from the ClassiCube client
-* Click **Direct connect** at the main menu
-* Type your username into *Username* textbox
-* Type ```[lan ip]:25565``` into *IP:Port* textbox (e.g. ```192.168.1.30:25565```)
-* Click **Connect**
-
-### Across the internet
-You usually need to port forward in your router before other players can join.
-
-#### Joining from a web browser
-Enter the server URL into the web browser
-
-#### Joining from the ClassiCube client
-* Click **Sign in**
-* Type/paste the hash (e.g. ```d1362e7fee1a54365514712d007c8799```) into the *classicube.net/server/play* text box
-* Click **Connect**
-
-
-### Show on classicube.net server list
-Click **Settings** in the MCGalaxy window, then tick the **Public** checkbox. Then click **Save**.
-
-This makes your server appear in the server list on classicube.net and in the ClassiCube client.
+![opt3](https://github.com/Evanzap/KDEGalaxy/blob/master/images/fullscreen_with_apps.png?raw=true)
 
 Compiling - mono and .NET framework
 -----------------
