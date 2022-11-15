@@ -24,10 +24,10 @@ namespace MCGalaxy.Commands.Moderation {
     public sealed class CmdPatrol : Command2 {
         public override string name { get { return "Patrol"; } }
         public override string type { get { return CommandTypes.Moderation; } }
-        public override LevelPermission defaultRank { get { return LevelPermission.AdvBuilder; } }
+        public override LevelPermission defaultRank { get { return LevelPermission.Operator; } }
         public override bool SuperUseable { get { return false; } }
         public override CommandPerm[] ExtraPerms {
-            get { return new[] { new CommandPerm(LevelPermission.Builder, "are not patrolled") }; }
+            get { return new[] { new CommandPerm(LevelPermission.Operator, "are not patrolled") }; }
         }
 
         public override void Use(Player p, string message, CommandData data) {

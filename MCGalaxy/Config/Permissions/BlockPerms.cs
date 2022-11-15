@@ -172,7 +172,6 @@ namespace MCGalaxy.Blocks
         
         static LevelPermission DefaultPerm(BlockID block) {
             switch (block) {
-                case Block.Bedrock:
                 case Block.Air_Flood:
                 case Block.Air_FloodDown:
                 case Block.Air_FloodLayer:
@@ -203,11 +202,7 @@ namespace MCGalaxy.Blocks
                 case Block.FlagBase:
                     return LevelPermission.Operator;
 
-                case Block.FloatWood:
-                case Block.LavaSponge:
-                case Block.Door_Log_air:
-                case Block.Door_Green_air:
-                case Block.Door_TNT_air:
+                case Block.Bedrock:
 
                 case Block.Water:
                 case Block.Lava:
@@ -233,6 +228,14 @@ namespace MCGalaxy.Blocks
                 case Block.C4Detonator:
                 case Block.TNT_Small:
                 case Block.TNT_Explosion:
+                    return LevelPermission.Trusted;
+
+                case Block.FloatWood:
+                case Block.LavaSponge:
+                case Block.Door_Log_air:
+                case Block.Door_Green_air:
+                case Block.Door_TNT_air:
+
                 case Block.Fireworks:
                 case Block.Checkpoint:
                 case Block.Train:
@@ -241,7 +244,7 @@ namespace MCGalaxy.Blocks
                 case Block.Bird_Black:
                 case Block.Bird_Water:
                 case Block.Bird_Lava:
-                    return LevelPermission.AdvBuilder;
+                return LevelPermission.AdvBuilder;
             }
             return LevelPermission.Guest;
         }

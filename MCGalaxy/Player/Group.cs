@@ -188,17 +188,18 @@ namespace MCGalaxy
                 LoadFromDisc();
             } else {
                 // Add some default ranks
-                Add(LevelPermission.Builder,      4096,        5, "Builder",    "&2", GEN_LIMIT,   3); // 16^3 draw volume
-                Add(LevelPermission.AdvBuilder, 262144,       15, "AdvBuilder", "&3", GEN_LIMIT,   5); // 64^3
-                Add(LevelPermission.Operator,  2097152,       90, "Operator",   "&c", GEN_LIMIT,   8); // 128^3
-                Add(LevelPermission.Admin,    16777216, 21024000, "Admin",      "&e", GEN_ADMIN,  32); // 256^3
-                Add(LevelPermission.Owner,   134217728, 21024000, "Owner",      "&4", GEN_ADMIN, 256); // 512^3
+                Add(LevelPermission.Builder,      4096,        5, "Limited_User",        "&2", GEN_LIMIT,   3); // 16^3 draw volume
+                Add(LevelPermission.AdvBuilder, 262144,       15, "User",                "&3", GEN_LIMIT,   5); // 64^3
+                Add(LevelPermission.Trusted,    900000,       50, "Elevated_User",       "&b", GEN_ADMIN,   7); // 64^3
+                Add(LevelPermission.Operator,  2097152,       90, "Operator",            "&c", GEN_ADMIN,   8); // 128^3
+                Add(LevelPermission.Admin,    16777216, 21024000, "SuperOP", "&e", GEN_ADMIN,  32); // 256^3
+                Add(LevelPermission.Owner,   134217728, 21024000, "Sudoer",              "&4", GEN_ADMIN, 256); // 512^3
             }
 
             if (BannedRank == null)
                 Add(LevelPermission.Banned,        1,        0, "Banned", "&8", GEN_LIMIT, 0);
             if (GuestRank == null)
-                Add(LevelPermission.Guest,         1,        2, "Guest",  "&7", GEN_LIMIT, 3);
+                Add(LevelPermission.Guest,         1,        2, "Guest_Account",  "&7", GEN_LIMIT, 3);
             
             GroupList.Sort((a, b) => a.Permission.CompareTo(b.Permission));
             DefaultRank = Find(Server.Config.DefaultRankName);

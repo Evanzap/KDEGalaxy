@@ -33,7 +33,7 @@ namespace MCGalaxy
 {
     public enum LevelPermission
     {
-        Banned  = -20, Guest =   0, Builder = 30, AdvBuilder =  50, 
+        Banned  = -20, Guest =   0, Builder = 30, AdvBuilder =  50, Trusted = 65,
         Operator = 80, Admin = 100, Owner  = 120, Console    = 127,
 
         Null = 150, Nobody = 120 // backwards compatibility

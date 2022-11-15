@@ -23,8 +23,8 @@ using MCGalaxy.Modules.Relay.IRC;
 namespace MCGalaxy {
     public sealed class ServerConfig : EnvConfig {
 
-        [ConfigString("server-name", "Server", "[MCGalaxy] Default", false, " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")]
-        public string Name = "[MCGalaxy] Default";
+        [ConfigString("server-name", "Server", "[KDEGalaxy] Default", false, " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")]
+        public string Name = "[KDEGalaxy] Default";
         [ConfigString("motd", "Server", "Welcome", false)]
         public string MOTD = "Welcome!";
         [ConfigInt("max-players", "Server", 16, 1, Server.MAX_PLAYERS)]
